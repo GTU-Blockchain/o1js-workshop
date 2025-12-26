@@ -133,15 +133,7 @@ If tests run successfully, you are ready.
 
 ## 🧪 Workshop Steps
 
-### Step 1 – Commitment Proof
-
-**Goal:**
-
--   Prove that a secret value
--   Matches a public commitment
--   Without revealing the secret
-
-### Step 2 – Mini Challenge: Age ≥ 18
+### Mini Challenge: Age ≥ 18
 
 **Goal:**
 
