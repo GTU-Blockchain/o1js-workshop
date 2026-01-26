@@ -3,4 +3,21 @@ import {
   CommitmentProgramProof,
 } from './CommitmentProgram.js';
 
-export { CommitmentProgram, CommitmentProgramProof };
+import {
+  AgeVerificationProgram,
+  AgeVerificationProof,
+  PublicInputs,
+  PrivateInputs,
+  PublicOutputs,
+} from './AgeVerificationProgram.js';
+
+export { 
+  CommitmentProgram, 
+  CommitmentProgramProof,
+  AgeVerificationProgram,
+  AgeVerificationProof,
+  PublicInputs,
+  PrivateInputs,
+  PublicOutputs,
+};
+

@@ -22,7 +22,7 @@ const privateInput2 = new PrivateInputs({
   yearOfBirth: Field(2010),
 });
 
-console.log('Generating proof for birth year 2001...');
+console.log('Test 1: Generating proof for birth year 2001...');
 const { proof } = await AgeVerificationProgram.proveAge(publicInput, privateInput1);
 console.log('Proof generated successfully!');
 
@@ -40,14 +40,13 @@ try {
 
 console.log();
 
-console.log('Generating proof for birth year 2010...');
+console.log('Test 2: Generating proof for birth year 2010 (age 16 - should fail)...');
 try {
   const { proof: proof2 } = await AgeVerificationProgram.proveAge(publicInput, privateInput2);
   
-  console.log('Proof generated successfully!'); // if the proof is to be generated for age < 18, assert should be removed.
+  console.log('❌ ERROR: Proof should not have been generated!');
   console.log('Proof:', proof2);
 } catch (error) {
-  console.log('Correctly rejected - cannot generate proof for age < 18');
+  console.log('✅ Correctly rejected - cannot generate proof for age < 18');
   console.log('Error:', (error as Error).message);
 }
-
